@@ -27,7 +27,7 @@ public class UserDaoService {
         return users.stream()
                 .filter(u -> Objects.equals(u.getId(), id))
                 .findAny()
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElse(null);
     }
 
     public User save(User user) {

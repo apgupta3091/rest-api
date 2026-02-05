@@ -10,12 +10,12 @@ public class User {
     @Size(min = 2, message = "Name should have atleast 2 characters")
     private String name;
     @Past(message = "Birthdate should be in the past")
-    private LocalDate birthData;
+    private LocalDate birthDate;
 
-    public User(Integer id, String name, LocalDate birthData) {
+    public User(Integer id, String name, LocalDate birthDate) {
         this.id = id;
         this.name = name;
-        this.birthData = birthData;
+        this.birthDate = birthDate;
     }
 
     public Integer getId() {
@@ -34,12 +34,12 @@ public class User {
         this.name = name;
     }
 
-    public LocalDate getBirthData() {
-        return birthData;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthData(LocalDate birthData) {
-        this.birthData = birthData;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", birthData=" + birthData +
+                ", birthDate=" + birthDate +
                 '}';
     }
 }
